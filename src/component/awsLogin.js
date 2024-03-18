@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
   const [message, setMessage] = useState()
   useEffect(()=>{
     async function fetchData(){
-      const data = await axios.get('https://servuprint.com/')
+      const data = await axios.get('https://vvxjz6rz-3000.inc1.devtunnels.ms/')
       setMessage(data.data.message)
     }
     fetchData()
@@ -31,5 +31,6 @@ export default AWSLogin;
 //   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 // }), (req, res, next) => {
 //   next()
-//   // Your route logic here
-// });
+// }, (req,res)=>{
+//   return res.status(200).json({message:"Hello from server!"})
+// } );
