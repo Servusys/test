@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
   const [message, setMessage] = useState()
   useEffect(()=>{
     async function fetchData(){
-      const data = await axios.get('http://44.215.124.44:3000/')
+      const data = await axios.get('https://servuprint.com/')
       setMessage(data.data.message)
     }
     fetchData()
@@ -25,3 +25,11 @@ import { useEffect, useState } from 'react';
 }
 
 export default AWSLogin;
+
+// app.get('/', cors({
+//   origin: 'https://master.d2ly27nu4njq4.amplifyapp.com/',
+//   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+// }), (req, res, next) => {
+//   next()
+//   // Your route logic here
+// });
